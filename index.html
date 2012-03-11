@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Watson Ladd's Github Blog</title>
+    <meta name="author" content="Watson Ladd">
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: justify;
+        max-width: 55em;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fbfbfc;
+      }
+
+      h1, h2 {
+        font-family: 'Yanone Kaffeesatz', arial, serif;
+        font-weight: normal;
+      }
+
+      h3 a {
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      h1 a {
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      h1 {
+        font-size: 4.5em;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        padding-top: 0;
+      }
+
+      h2 {
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 2em;
+      }
+
+      h3 {
+        margin-left: -2em;
+        font-weight: normal;
+      }
+
+
+      td.topblock {
+        max-width: 25em;
+      }
+
+      td.topblockpadleft {
+        padding-left: 2em;
+      }
+
+      div.postcontents {
+      }
+
+      div.postcontents h3:before {
+        content: "» ";
+      }
+
+      div.postcontents h3 {
+        padding-top: 3em;
+      }
+
+      div.postcontents h3 a {
+        color: #222;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      div.postcontents a {
+        color: #222;
+      }
+
+      div.topbox {
+      }
+
+      div.topbox h1 {
+      }
+
+      /* For the SELinux page */
+
+      div#selinux {
+        max-width: 65em;
+        text-align: justify;
+      }
+      div#selinux .subject {
+        color: red;
+      }
+      div#selinux .action {
+        color: green;
+      }
+      div#selinux .object {
+        color: blue;
+      }
+      div#selinux .class {
+        font-family: monospace;
+        color: brown;
+      }
+      .div#selinux permission {
+        font-family: monospace;
+        color: cadetblue;
+      }
+      div#selinux .type {
+        color: yellowgreen;
+      }
+      div#selinux .fileaction {
+        font-variant: small-caps;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="topbox">
+  <h1>Localized Musings</h1>
+  <h2>Watson Ladd's Weblog</h2>
+</div>
+
+<div class="postcontents">
+  
+  <h3><a href="/2021/03/11/anon.html">Anonymous transactions in Bitcoin</a>
+  (11 March 2012)</h3>
+  <p>I've written a paper at <a href="bitcoinanon.pdf">here</a> about
+    creating anonymity for recipients of bitocoin transactions through blind
+    signatures. The fundamental idea is to introduce a new opcode and signature
+    type that can be used to restrict the order in which outputs of a script
+    can be redeemed.</p>
+  <p> This may or may not see wide support. It could be used by Bitcoin
+    exchanges to protect their users further, but at a cost in computation
+    time and complexity of redemption. We also need support from the blockchain
+    which will mean some time to go from writing code to implementation</p>
+  <p>In the future I hope to extend this to creating digital cash that is
+    backed by Bitcoins: such cash would combine the tradtional advantages of
+    digital currency in terms of ease of use and speed with the anti-inflation
+    properties of Bitcoins.</p>
+  <p>So let's talk about some uses of Bitcoins that aren't obvious. Let's
+    say I want to demonstrate to you that I can spend some Bitcoins. My ability
+    to spend Bitcoins is given by my possession of a public key. How can I
+    demostrate my possession of a key without doing anything that might
+    compromise my key?</p>
+  <p>The quick answer is for me to send to you a random multiple of my public
+    key, and then you ask me to prove that I know the discrete logarithm with
+    respect to the standard base or with respect to my key. This leaks no
+    information: given any transcript of the transaction, you could fake it.
+  </p>
+</div>
+  </body>
+</html>
